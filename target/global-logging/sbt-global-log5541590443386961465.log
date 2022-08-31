@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(22e7a169-1740-43d2-9474-3be67cfc345f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 14 Scala sources to C:\Users\Peh\Desktop\HealthCalculator\target\scala-2.12\classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were three deprecation warnings (since 2.11.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 17 s, completed Aug 31, 2022 5:36:51 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[31merror[0m] [0m[0mserver failed to start on local:sbt-server-b83380fd1ac94c04218d. java.io.IOException: Could not create lock for \\.\pipe\sbt-server-b83380fd1ac94c04218d_lock, error 5[0m

@@ -1,0 +1,13 @@
+.button:hover {
+    -fx-background-color: red;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.button:focused {
+    -fx-border-color: blue, blue;
+
+}

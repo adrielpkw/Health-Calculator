@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.scalafx</groupId>
+    <artifactId>scalafxml-core-macros-sfx8_2.12</artifactId>
+    <packaging>jar</packaging>
+    <description>ScalaFXML macros</description>
+    <url>https://github.com/vigoo/scalafxml</url>
+    <version>0.5</version>
+    <licenses>
+        <license>
+            <name>APL2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <name>scalafxml-core-macros-sfx8</name>
+    <organization>
+        <name>org.scalafx</name>
+        <url>https://github.com/vigoo/scalafxml</url>
+    </organization>
+    <scm>
+        <url>https://github.com/vigoo/scalafxml</url>
+        <connection>git@github.com:vigoo/scalafxml.git</connection>
+    </scm>
+    <developers>
+        <developer>
+            <id>vigoo</id>
+            <name>Daniel Vigovszky</name>
+            <email>daniel.vigovszky@gmail.com</email>
+            <url>https://vigoo.github.io</url>
+        </developer>
+        <developer>
+            <id>jpsacha</id>
+            <name>Jarek Sacha</name>
+            <email></email>
+            <url>https://github.com/jpsacha</url>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.12.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalafx</groupId>
+            <artifactId>scalafx_2.12</artifactId>
+            <version>12.0.2-R18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>3.0.8</version>
+            <scope>test</scope>
+        </dependency>
+        <!--provided dependency org.openjfx#javafx-base;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-controls;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-fxml;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-graphics;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-media;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-swing;12.0.2 has been omitted-->
+        <!--provided dependency org.openjfx#javafx-web;12.0.2 has been omitted-->
+    </dependencies>
+</project>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.PehKimWei.HealthCalculator.view.FemaleNavyBodyFatPercentagePageController">
+   <children>
+      <GridPane layoutX="191.0" layoutY="47.0" prefHeight="344.0" prefWidth="579.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="11.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="293.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="286.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="88.0" prefWidth="290.0" text="Neck circumference (cm)">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label prefHeight="104.0" prefWidth="290.0" text="Waist circumference (cm)" GridPane.rowIndex="1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label prefHeight="104.0" prefWidth="290.0" text="Hip circumference (cm)" GridPane.rowIndex="2">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label prefHeight="104.0" prefWidth="290.0" text="Height (cm)" GridPane.rowIndex="3">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label prefHeight="43.0" prefWidth="247.0" text="Body Fat Percentage" GridPane.rowIndex="5">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="fpResultLabel" prefHeight="51.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label prefHeight="51.0" prefWidth="171.0" text="Your category" GridPane.rowIndex="7">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel" prefHeight="51.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="neckInput" prefHeight="25.0" prefWidth="290.0" promptText="Please make sure neck value is not more than waist" GridPane.columnIndex="1" />
+            <TextField fx:id="waistInput" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="hipInput" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="heightInput" prefHeight="25.0" prefWidth="239.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleCalculateBtn" prefHeight="51.0" prefWidth="584.0" text="Calculate Body Fat Percentage" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewBtn" mnemonicParsing="false" onAction="#handleView" onKeyPressed="#view" prefHeight="51.0" prefWidth="581.0" text="View which category you are in" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane fx:id="listOfCategory" layoutX="93.0" layoutY="391.0" prefHeight="254.0" prefWidth="435.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="241.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Category">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" text="Essential Fat" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="17.0" prefHeight="35.0" prefWidth="230.0" text="Athletes" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="47.0" text="Fitness" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Range" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Average" GridPane.rowIndex="5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Obese" GridPane.rowIndex="6">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="10 - 13%" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="14 - 20%" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="21 - 24%" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="25 - 31%" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="32+%" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="75.0" text="Less than Essential Fat" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="75.0" text="&lt; 10%" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Text layoutX="164.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Female Navy Body Fat Calculator" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Italic" size="18.0" />
+         </font>
+      </Text>
+      <Button cancelButton="true" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleNavigationBtn" text="Back to Menu" />
+      <Button layoutX="521.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleToGenderVer" onKeyPressed="#goGender" text="For Males" />
+   </children>
+</AnchorPane>
