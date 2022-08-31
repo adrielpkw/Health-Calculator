@@ -16,9 +16,7 @@ Libraries used?
 
 1. ScalaFX
 
-2. ScalaFXML Core
-
-3. JavaFX
+2. JavaFX
 
 
 Result?
